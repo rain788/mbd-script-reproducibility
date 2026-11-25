@@ -1,0 +1,7 @@
+﻿task_id,title,repeat_count,success_case_count,success_rate,runtime_ok_rate,avg_attempt_count_success_only,avg_prompt_tokens_success_only,avg_completion_tokens_success_only,avg_total_tokens_success_only,avg_elapsed_seconds_total_success_only,avg_elapsed_seconds_simulation_only_success_only,top_failure_stages
+T1_single_body_freefall_measure,Single rigid body free fall with displacement measurement,10,10,1.0,1.0,4.9,16496.8,559.0,17055.8,17.3744,17.3744,
+T2_two_body_revolute_joint,Two rigid bodies + revolute joint + angular response,10,10,1.0,1.0,3.7,13475.7,918.9,14394.6,14.295,14.295,
+T3_cylinder_barrel_ball_push_forcevector,Barrel and ball with axial ForceVector drive and velocity from XFORM differencing,10,10,1.0,1.0,3.5,12606.8,710.5,13317.3,15.7394,15.7394,
+T4_single_body_spring_damper_slide,Single sliding body with spring-damper recovery and displacement output,10,10,1.0,1.0,3.0,10546.4,748.7,11295.1,11.1228,11.1228,
+T5_imported_three_stage_recoil_multiconstraint,Imported three-stage recoil mechanism with multi-constraint response export,10,9,0.9,0.9,3.6667,15706.6667,1710.1111,17416.7778,20.6201,20.6201,L3:1
+T6_double_body_multi_load_measure,Two-body translational system with multiple loads and response measures,10,10,1.0,1.0,3.4,12594.9,1517.6,14112.5,14.5795,14.5795,

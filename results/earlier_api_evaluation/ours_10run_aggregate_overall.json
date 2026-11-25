@@ -1,0 +1,17 @@
+{
+  "repeat_count": 10,
+  "task_count_per_repeat": 6,
+  "total_runs": 60,
+  "success_case_count": 59,
+  "overall_success_rate": 0.9833,
+  "overall_runtime_ok_rate": 0.9833,
+  "overall_avg_attempt_count_success_only": 3.6949,
+  "overall_avg_prompt_tokens_success_only": 13535.0169,
+  "overall_avg_completion_tokens_success_only": 1015.8983,
+  "overall_avg_total_tokens_success_only": 14550.9153,
+  "overall_avg_elapsed_seconds_total_success_only": 15.5372,
+  "overall_avg_elapsed_seconds_simulation_only_success_only": 15.5372,
+  "overall_failure_stage_distribution": {
+    "L3": 1
+  }
+}
