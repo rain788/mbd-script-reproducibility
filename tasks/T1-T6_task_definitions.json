@@ -1,0 +1,17 @@
+{
+  "task_set": "section4_3_final_tasks_assets_r10",
+  "task_count": 6,
+  "tasks": [
+    {"id":"T1","name":"single_body_freefall_measure","output":"drop.bin","focus":"single-body modeling, gravity loading, dynamic solving, velocity response"},
+    {"id":"T2","name":"two_body_revolute_joint","output":"rev.bin","focus":"two-body modeling, revolute topology, torque drive, angular responses"},
+    {"id":"T3","name":"cylinder_barrel_ball_push_forcevector","output":"push.bin","focus":"reference geometry, axial force vector, displacement and velocity output"},
+    {"id":"T4","name":"single_body_spring_damper_slide","output":"slide_sd.bin","focus":"translational topology, recovery element, displacement/velocity/force output"},
+    {"id":"T5","name":"imported_three_stage_recoil_multiconstraint","output":"recoil_import.bin","focus":"CAD import, multi-level constraints, drive/coupling/recovery, multi-response export"},
+    {"id":"T6","name":"double_body_multi_load_measure","output":"multi_load.bin","focus":"series translational bodies, multiple loads, coupled response measurements"}
+  ],
+  "evaluation": {
+    "repeats_per_task": 10,
+    "skeleton_completion": "minimum runnable dynamics skeleton plus verified simulation execution",
+    "task_completion": "skeleton completion plus task-specific measurements, exports, and physical-response checks"
+  }
+}
