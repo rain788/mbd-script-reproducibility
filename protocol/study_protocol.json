@@ -1,0 +1,260 @@
+{
+  "models": [
+    {
+      "name": "qwen3:8b",
+      "digest": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "quantization": "Q4_K_M",
+      "context": 32768
+    },
+    {
+      "name": "qwen3:30b",
+      "digest": "sha256:ad815644918f0eaab341c12b67837cc6dd4562342cdaf118f83d5d554cb37226",
+      "quantization": "Q4_K_M",
+      "context": 32768
+    },
+    {
+      "name": "llama3.1:8b",
+      "digest": "sha256:46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "quantization": "Q4_K_M",
+      "context": 32768
+    },
+    {
+      "name": "gemma3:4b",
+      "digest": "sha256:68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+      "quantization": "Q4_K_M",
+      "context": 32768
+    }
+  ],
+  "sampling": {
+    "think": false,
+    "temperature": 0.1,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0
+  },
+  "budget": {
+    "max_output_tokens_per_call": 4096,
+    "max_output_tokens_per_run": 32768,
+    "max_model_calls": 32,
+    "max_solver_execs": 16,
+    "inference_timeout_s": 900,
+    "solver_timeout_s": 180,
+    "max_repair_calls": 8
+  },
+  "seeds": {
+    "T1": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "T2": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "T3": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "T4": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "T5": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "T6": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "H1": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "H2": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "H3": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "H4": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "H5": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ],
+    "H6": [
+      413,
+      419,
+      421,
+      431,
+      433,
+      439,
+      443,
+      449,
+      457,
+      461
+    ]
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20261103,
+    "unit": "task cluster"
+  },
+  "numerical_acceptance": {
+    "T1": {
+      "criterion": "m (terminal position)",
+      "tolerance": 0.0001
+    },
+    "T2": {
+      "criterion": "rad (terminal angle)",
+      "tolerance": 0.002
+    },
+    "T3": {
+      "criterion": "m/s (terminal backward-difference speed)",
+      "tolerance": 0.02
+    },
+    "T4": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.005
+    },
+    "T5": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.005
+    },
+    "T6": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.005
+    },
+    "H1": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.005
+    },
+    "H2": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.01
+    },
+    "H3": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.005
+    },
+    "H4": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.005
+    },
+    "H5": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.01
+    },
+    "H6": {
+      "criterion": "max relative trace error",
+      "tolerance": 0.01
+    }
+  },
+  "counts": {
+    "formal_runs": 3360,
+    "ablation_runs": 600,
+    "infra_error": 7,
+    "aborted": 0,
+    "distinct_run_ids": 3967
+  },
+  "run_period": {
+    "controlled_study": "2026-11-13 to 2026-11-18 (UTC+8)",
+    "buffer_reference": "2026-11-12 (UTC+8)"
+  },
+  "platform": "Adams/View 2025.1.1 (Python interface); local inference through Ollama; NVIDIA GeForce RTX 4090 GPU",
+  "text_units": "Counted by the run controller over all model calls of a run (input and output); not provider tokenizer counts.",
+  "end_to_end_time": "Model inference + Adams execution + orchestration; excludes one-off model loading.",
+  "acceptance": "complete_success = gate_exec AND gate_num AND gate_fid AND gate_exp"
+}
