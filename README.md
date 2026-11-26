@@ -18,8 +18,8 @@ Public materials supporting the manuscript
 | `results/controlled_study/checker_test_results.csv` | Gate truth-table and tolerance-boundary tests of the checker |
 | `results/controlled_study/gate_combinations.csv` | Counts of each gate combination |
 | `results/controlled_study/h6_geometry_audit.csv` | Loop-closure audit of H6 histories |
-| `results/buffer_case/adams_nine_case_screen.csv` | Nine-case screen obtained with the generated Adams model |
-| `results/buffer_case/reference_solutions.csv` | Independent two-DOF reference at 2, 1 and 0.5 ms maximum steps |
+| `results/buffer_case/adams_nine_case_screen.csv` | Nine-case screen obtained with the generated Adams model; `feasible_declared_limits` applies the limits of Table 6-1 (stroke ≤ 70 mm, stage-1 ≤ 45 m/s², stage-2 ≤ 17 m/s², interstage force ≤ 6000 N) |
+| `results/buffer_case/reference_solutions.csv` | Independent two-DOF reference at 2, 1 and 0.5 ms maximum steps, with the same feasibility flag |
 | `results/earlier_api_evaluation/` | Aggregates of the earlier API-based evaluation (not used for inference) |
 | `checks/check_package.py` | Recomputes the main statistics and the buffer checks from these files |
 
