@@ -250,7 +250,7 @@
     "distinct_run_ids": 3967
   },
   "run_period": {
-    "local_model_calls_and_computations": "2026-10-18 to 2026-11-18 (UTC+8)"
+    "local_model_calls_and_computations": "2026-10-21 to 2026-11-18 (UTC+8)"
   },
   "platform": "Adams/View 2025.1.1 (Python interface); local inference through Ollama; NVIDIA GeForce RTX 4090 GPU",
   "text_units": "Counted by the run controller over all model calls of a run (input and output); not provider tokenizer counts.",
