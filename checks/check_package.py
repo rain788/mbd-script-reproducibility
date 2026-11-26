@@ -78,7 +78,20 @@ def check_buffer():
         ok = s <= 70 and a2 <= 17 and float(r['peak_force_N']) <= 6000 and 3500 / 80 <= 45
         if ok: feas.append((k, c))
         print(f'k={k:5.0f} c={c:.1f}: stroke {s:7.3f} mm, a2 {a2:6.3f} m/s2, static dev {max(abs(zend[0]-zs1), abs(zend[1]-zs2)):.1e} mm, RK4-expm {err:.1e}, feasible {ok}')
-    print('feasible candidates:', feas)
+    print('reference feasible candidates (declared limits):', feas)
+    adams = list(csv.DictReader(open(P('results', 'buffer_case', 'adams_nine_case_screen.csv'))))
+    def feasible(stroke_lim):
+        ad = [(float(r['coupling_stiffness_N_per_mm']), float(r['coupling_damping_N_s_per_mm'])) for r in adams
+              if float(r['first_stage_peak_dz_mm']) <= stroke_lim and float(r['first_stage_peak_az_mm_per_s2']) / 1e3 <= 45
+              and float(r['second_stage_peak_az_mm_per_s2']) / 1e3 <= 17 and float(r['peak_coupling_force_N']) <= 6000]
+        rf = [key for key, r in sorted(ref.items()) if float(r['peak_stroke_mm']) <= stroke_lim and float(r['peak_a1_m_s2']) <= 45
+              and float(r['peak_a2_m_s2']) <= 17 and float(r['peak_force_N']) <= 6000]
+        return ad, rf
+    for lim in (70, 75):
+        ad, rf = feasible(lim)
+        sel = lambda c: min(c, key=lambda kc: float(ref[kc]['peak_stroke_mm'])) if c else None
+        print(f'stroke limit {lim} mm: Adams feasible {ad}, reference feasible {rf}, selected {sel(ad)} / {sel(rf)}')
+    print('note: k=140, c=0.4 has a2 = 16.97 (Adams) vs 17.02 (reference) m/s2, on opposite sides of the 17 m/s2 limit')
 
 if __name__ == '__main__':
     check_gates(); check_tables(); check_buffer()
